@@ -21,7 +21,17 @@ namespace StarCraft
             Marine_GetDamagd(m2, 3);
             Firebat f1 = new Firebat();
             Firebat_UseSteamPack(f1, 1);
+            Firebat_UseSteamPackCore(f1);
             Firebat_GetDamagd(f1, 3);
+            ShowHp(m1);
+            f1.Hp -= 100;
+        }
+
+        private static void ShowHp(Marine m1)
+        {
+           //Console.WriteLine($"m1의 Hp는 {m1.Hp} 이고 Speed는  {m1.Speed} 입니다.");
+           //Console.WriteLine($"m1의 Hp는 {0} 이고 Speed는  {1} 입니다.", m1.Hp, m1.Speed);
+            Console.WriteLine($"m1의 Hp는 {m1.Hp} 이고 Speed는  {m1.Speed} 입니다.");
         }
 
         private static void Firebat_GetDamagd(Firebat f1, int enemyAttack)
