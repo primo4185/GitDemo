@@ -8,6 +8,11 @@ namespace StarCraft
 {
     class Ghost : Unit
     {
-    
+
+        public bool isClocking()
+        {
+            throw new System.NotImplementedException();
+        }
+        private int _nuclearCount;
     }
 }
