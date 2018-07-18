@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Firebat.cs" />
+    <Compile Include="Ghost.cs" />
     <Compile Include="Marine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="Zealot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

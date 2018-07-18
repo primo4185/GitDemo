@@ -10,41 +10,26 @@ namespace StarCraft
     {
         static void Main(string[] args)
         {
-            Marine m1 = new Marine();
-            int hp1 = m1.UseSteamPack(2);
+            Unit m3 = new Marine();
+            Unit f3 = new Firebat();
 
-            Marine m2 = new Marine();
-            int hp2 = m2.UseSteamPack(1);
+            Unit[] units = new Unit[2];
+            units[0] = m3;
+            units[1] = f3;
 
-            m1.Heal(30);
-
-            m2.GetDamagd(3);
-            Firebat f1 = new Firebat();
-            f1.UseSteamPack(1);
-            //f1.UseSteamPackCore(1);
-            f1.GetDamagd(3);
-
-
-        }
-
-
-
-
- 
-
-        /* static int UseSteamPack(Marine m, int count)
-{
-    for (int i = 0; i < count; i++)
-    {
-        m.Hp = m.Hp - 5;
-        m.Speed = m.Speed + 1;
-
-    }
-
-    return m.Hp; */
+            for (int i = 0; i < units.Length; i++)
+            {
+                units[i].GetDamaged(2);
+            }
+            for (int i = 0; i < units.Length; i++)
+            {
+                ShowHP(units[i]);
+            }
 
         }
-
+        static void ShowHP(Unit u)
+        {
+            Console.WriteLine($"Hp는 {u.GetHp()} 입니다.");
         }
 
     }
